@@ -1,6 +1,6 @@
 {
   "name": "loopback-typescript-example",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "server/server.js",
   "scripts": {
     "lint": "eslint .",
@@ -18,14 +18,14 @@
     "serve-favicon": "^2.0.1",
     "strong-error-handler": "^1.0.1",
     "loopback-component-explorer": "^4.0.0",
-    "loopback": "^3.0.0"
+    "loopback": "^3.0.0",
+    "ts-node": "^2.1.0",
+    "typescript": "^2.2.1"
   },
   "devDependencies": {
     "eslint": "^2.13.1",
     "eslint-config-loopback": "^4.0.0",
-    "nsp": "^2.1.0",
-    "ts-node": "^2.1.0",
-    "typescript": "^2.2.1"
+    "nsp": "^2.1.0"
   },
   "repository": {
     "type": "git",
