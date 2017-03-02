@@ -1,5 +1,5 @@
 'use strict';
-require('ts-node/register');
+require('ts-node').register();
 
 var loopback = require('loopback');
 var boot = require('loopback-boot');
