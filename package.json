@@ -1,6 +1,6 @@
 {
   "name": "loopback-typescript-example",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "server/server.js",
   "scripts": {
     "lint": "eslint .",
