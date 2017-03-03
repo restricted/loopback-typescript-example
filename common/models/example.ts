@@ -5,7 +5,9 @@ import {Model} from "@mean-expert/model";
  **/
 @Model({
   hooks: {
-    beforeSave: {name: 'before save', type: 'operation'}
+    beforeSave: {name: 'before save', type: 'operation'},
+    beforeMyRemote: {name: 'myRemote', type: 'beforeRemote'},
+    afterMyRemote: {name: 'myRemote', type: 'afterRemote'},
   },
   remotes: {
     myRemote: {
@@ -20,13 +22,25 @@ class account {
   }
 
   beforeSave(ctx: any, next: Function): void {
-    console.log('example: Before Save');
+    console.log('example: before Save');
+    next();
+  }
+
+  beforeMyRemote(ctx: any, next: Function) {
+    console.log('example: before myRemote');
     next();
   }
 
   myRemote(next: Function): void {
+    console.log('example: myRemote');
     this.model.find(next);
   }
+
+  afterMyRemote(ctx: any, next: Function) {
+    console.log('example: after myRemote');
+    next();
+  }
+
 }
 
 module.exports = account;
